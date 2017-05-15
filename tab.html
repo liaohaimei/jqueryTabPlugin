@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    *{margin: 0; padding: 0;}
+    .clearfix:after { content: ''; display: block; height: 0; clear: both; visibility: hidden }
+    .clearfix { *zoom:1}
+    ul{ list-style: none;}
+    .tab{ width: 500px; margin:0 auto;}
+    .tab-nav { overflow: hidden;}
+    .tab-nav li{ float:left; padding: 0 30px; cursor: pointer;   line-height: 30px; background-color: #fafafa;}
+    .tab-nav li.active{ background-color: #CCC;}
+    .con{  border:1px solid #CCC; margin-bottom: 10px;}
+    .tab-content{ padding: 10px; }
+    .tab-content .tab-item{ display: none;}
+    .tab-content .active{ display: block;}
+  </style>
+</head>
+<body>
+  <div class="js-tab tab">
+      <ul class="tab-nav">
+        <li class="active">angular</li>
+        <li>react</li>
+        <li>vue</li>
+        <li>vue2</li>
+      </ul>
+      <div class="con">
+      <div class="tab-content clearfix">
+        <div class="tab-item active"><p>angularangular</p><p>angularangular</p><p>angularangular</p></div>
+        <div class="tab-item">react<div>
+          good
+        </div></div>
+        <div class="tab-item">vue</div>
+        <div class="tab-item">vue2</div>
+      </div>
+    </div>
+  </div>
+  <div class="js-tab tab" data-config='{
+    "triggerType":"click",
+    "effect":"fade",
+    "invoke":3,
+    "auto":2000
+  }'>
+      <ul class="tab-nav">
+        <li class="active">angular</li>
+        <li>react</li>
+        <li>vue</li>
+        <li>vue2</li>
+      </ul>
+      <div class="con">
+      <div class="tab-content clearfix">
+        <div class="tab-item active"><p>angularangular</p><p>angularangular</p><p>angularangular</p></div>
+        <div class="tab-item">react<div>
+          good
+        </div></div>
+        <div class="tab-item">vue</div>
+        <div class="tab-item">vue2</div>
+      </div>
+    </div>
+  </div>
+  <div class="js-tab tab" data-config='{
+    "triggerType":"mouseover",
+    "effect":"fade",
+    "invoke":2,
+    "auto":false
+  }'>
+      <ul class="tab-nav">
+        <li class="active">angular</li>
+        <li>react</li>
+        <li>vue</li>
+        <li>vue2</li>
+      </ul>
+      <div class="con">
+      <div class="tab-content clearfix">
+        <div class="tab-item active"><p>angularangular</p><p>angularangular</p><p>angularangular</p></div>
+        <div class="tab-item">react<div>
+          good
+        </div></div>
+        <div class="tab-item">vue</div>
+        <div class="tab-item">vue2</div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="jquery.tab.1.0.js" charset="utf-8"></script>
+<script>
+  $(function(){
+
+    //var tab = new Tab($(".js-tab").eq(0));
+    //Tab.init($(".js-tab"));
+    $(".js-tab").tab();
+
+  })
+</script>
+</body>
+</html>

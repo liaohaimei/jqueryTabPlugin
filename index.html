@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    *{margin: 0; padding: 0;}
+    ul{ list-style: none;}
+    .tab{ width: 500px; margin:0 auto;}
+    .tab-nav { overflow: hidden;}
+    .tab-nav li{ float:left; padding: 0 30px; cursor: pointer;   line-height: 30px; background-color: #fafafa;}
+    .tab-nav li.active{ background-color: #CCC;}
+    .tab-content{ border:1px solid #CCC; padding: 10px;}
+    .tab-content>div{ display: none;}
+  </style>
+</head>
+<body>
+  <div class="tab">
+      <ul class="tab-nav">
+        <li class="active">angular</li>
+        <li>react</li>
+        <li>vue</li>
+      </ul>
+      <div class="tab-content">
+        <div>angularangular</div>
+        <div>react<div>
+          good
+        </div></div>
+        <div>vue</div>
+      </div>
+  </div>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="jquery.tab.js" charset="utf-8"></script>
+<script>
+  $(function(){
+    $(".tab").tab({
+
+    });
+
+  })
+</script>
+</body>
+</html>
